@@ -1,11 +1,11 @@
 "use client";
 
-import { useTheme } from "next-themes";
-import Image from "next/image";
+// import { useTheme } from "next-themes";
+// import Image from "next/image";
 import Link from "next/link";
 
 export default function Footer() {
-  const { theme } = useTheme();
+  // const { theme } = useTheme();
   return (
     <div className="py-8 flex flex-col px-5 md:px-10 justify-start items-start border-t border-gray-300 dark:border-gray-600 mt-10 space-y-6">
       <Link href={"/"} className="flex space-x-2 items-center">
