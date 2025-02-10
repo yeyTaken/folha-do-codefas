@@ -2,16 +2,15 @@ import type { Metadata } from "next";
 import { Work_Sans } from "next/font/google";
 import "./globals.css";
 
-
-import { ThemeProvider } from "@/components/Theme";
+import { ThemeProvider } from "@/components/Theme/ThemeProvider";
 
 const work_Sans = Work_Sans({
   subsets: ["latin"],
-})
+});
 
 export const metadata: Metadata = {
   title: "Folha do CODEFAS",
-  description: "Jornal CODEFAS",
+  description: "agencia de noticias do CODEFAS.",
 };
 
 export default function RootLayout({
@@ -22,10 +21,20 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body
-        className={`${work_Sans.className} antialiased bg-white dark:bg-[#131111] text-black dark:text-white max-w-7x1 mx-auto`}
+        className={`${work_Sans.className} antialiased bg-white dark:bg-[#030304] text-black dark:text-white max-w-7xl mx-auto`}
       >
+        {/* <Header /> */}
 
-        <ThemeProvider attribute={"class"} defaultTheme="system" enableSystem disableTransitionOnChange>{children}</ThemeProvider>
+        <ThemeProvider
+          attribute={"class"}
+          defaultTheme="system"
+          enableSystem
+          disableTransitionOnChange
+        >
+          {children}
+        </ThemeProvider>
+
+        {/* <Footer /> */}
       </body>
     </html>
   );
